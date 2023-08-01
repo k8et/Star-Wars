@@ -11,6 +11,7 @@ function MainReleaseParent() {
       </Release>
       <LoremContainer>
         <p>{MainReleaseText}</p>
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a href="#">Pre-Order ticket now</a>
       </LoremContainer>
     </MainRelease>

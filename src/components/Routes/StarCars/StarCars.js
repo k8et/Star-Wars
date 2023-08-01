@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { FilmsPhoto } from "../../../constants/MockData";
 
 function StarCars({ value }) {
-  let [values, setValues] = useState([]);
+  let [setValues] = useState([]);
   let [film, setFilm] = useState([]);
 
   useEffect(() => {
@@ -19,6 +19,7 @@ function StarCars({ value }) {
   //
   // console.log(data);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const completeTodo = async () => {
     const arr = [];
     for (let key in value) {
@@ -32,7 +33,7 @@ function StarCars({ value }) {
 
   useEffect(() => {
     completeTodo().then((p) => setValues(p));
-  }, [value]);
+  }, [completeTodo, setValues, value]);
 
   if (!value) {
     return <Loader />;
